@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AGE calculator</title>
+</head>
+<body >
+    <div class="container">
+    <h1>AGE CALCULATOR</h1>
+    <br>
+    <label  for="text"></label>
+    <input  id="name" placeholder="Name">
+    <br>
+    <label class="dob" for="number"></label>
+    <input placeholder="Year" id="y1">
+    <br>
+    
+    <button onclick="age()">Get Age</button>
+    <h4 id="y"></h4>
+    <h4 id="n"></h4>
+    </div>
+    
+</body>
+<script>
+    function age()
+    {
+       var y1 = document.getElementById('y1').value;
+       var n1 = document.getElementById('name').value;
+       var d = new Date();
+       var y2 = d.getFullYear();
+       var current = y2-y1;
+       document.getElementById('y').innerHTML='Name: '+n1;
+       document.getElementById('n').innerHTML='Age: '+current;
+
+        
+    }
+</script>
+</html>
